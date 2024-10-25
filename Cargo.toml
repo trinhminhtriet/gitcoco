@@ -1,0 +1,63 @@
+[package]
+name = "gitcoco"
+version = "0.1.0"
+description = "GitCoco: A Rust-based CLI for Conventional Commits, making commit standardization effortless and consistent for seamless project versioning and collaboration."
+keywords = ["conventional", "commit", "changelog", "semantic", "versioning"]
+categories = ["development-tools::build-utils"]
+readme = "README.md"
+homepage = "https://trinhminhtriet.com"
+repository = "https://github.com/trinhminhtriet/gitcoco"
+license = "MIT"
+authors = ["Triet Trinh <contact@trinhminhtriet.com>"]
+edition = "2021"
+include = [
+    "build.rs",
+    "src/*",
+    "README.md",
+    "LICENSE"
+]
+rust-version = "1.60" # for `--features`
+
+[dependencies]
+anyhow = { version = "1.0.89", features = ["backtrace"] }
+clap = { version = "4.5.20", features = ["derive", "env"] }
+ctrlc = "3.4.5"
+dialoguer = { version = "0.11.0", features = ["fuzzy-select"] }
+git2 = { version = "0.19.0", default-features = false }
+handlebars = "6.1.0"
+regex = "1.11.0"
+semver = "1.0.23"
+serde = { version = "1.0.210", features = ["derive"] }
+serde_yaml = "0.9.32"
+thiserror = "1.0.64"
+time = { version = "0.3.36", features = [ "serde-human-readable" ] }
+url = "2.5.2"
+walkdir = "2.5.0"
+
+[build-dependencies]
+clap = { version = "4.5.20", features = ["derive", "env"] }
+clap_complete = "4.5.32"
+semver = "1.0.23"
+
+[features]
+default = ["zlib-ng-compat"]
+zlib-ng-compat = ["git2/zlib-ng-compat"]
+
+[profile.release]
+strip = true
+
+[package.metadata.deb]
+depends = ""
+extended-description = """\
+Conventional commit tools. \
+Create a changelog. \
+Check if commits follow the convention. \
+Calculate the next version based on the conventional commits."""
+assets = [
+    # bin
+    ["bin/gitcoco", "/usr/local/bin/", "755"],
+    # completions
+    ["target/completions/gitcoco.bash", "/usr/share/bash-completion/completions/", "644"],
+    ["target/completions/_gitcoco", "/usr/share/zsh/vendor-completions/", "644"],
+    ["target/completions/gitcoco.fish", "/usr/share/fish/completions/", "644"],
+]
