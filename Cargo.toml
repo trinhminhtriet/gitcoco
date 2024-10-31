@@ -1,6 +1,6 @@
 [package]
 name = "gitcoco"
-version = "0.1.1"
+version = "0.1.2"
 description = "GitCoco: A Rust-based CLI for Conventional Commits, making commit standardization effortless and consistent for seamless project versioning and collaboration."
 keywords = ["conventional", "commit", "changelog", "semantic", "versioning"]
 categories = ["development-tools::build-utils"]
