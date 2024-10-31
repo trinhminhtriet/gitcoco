@@ -1,28 +1,35 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: "Bug report"
+about: Create a bug report for gitcoco.
 title: ''
 labels: bug
-assignees: ''
+assignees: 'trinhminhtriet'
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+<!---
+1. Verify first that your issue/request is not already reported on GitHub.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Clone '...'
-2. Run `gitcoco ...`
-4. See error ...
+2. PLEASE FILL OUT ALL REQUIRED INFORMATION BELOW! Otherwise it might take more time to properly handle this bug report.
+-->
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**System (please complete the following information):**
- - OS: [e.g. ubuntu]
- - Version: [e.g. 19.10]
+### ISSUE TYPE:
+ - Bug Report
 
 
-**Additional context**
-Add any other context about the problem here.
+#### OS / ENVIRONMENT:
+1. [ ] Operating system: 
+2. [ ] gitcoco version:
+
+#### STEPS TO REPRODUCE:
+1.
+2.
+3.
+
+#### EXPECTED BEHAVIOUR:
+explanation
+
+#### ACTUAL BEHAVIOUR:
+explanation
+
+#### Additional information (optional):
