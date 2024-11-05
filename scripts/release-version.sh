@@ -25,6 +25,5 @@ git commit -am "v$new_version"
 git tag v$new_version
 
 echo ">>> Publish"
-cargo publish
 git push
 git push origin v$new_version
