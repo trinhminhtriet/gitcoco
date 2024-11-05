@@ -21,10 +21,10 @@ cargo test
 
 echo ">>> Commit"
 git add Cargo.toml
-git commit -am "version $new_version"
-git tag $new_version
+git commit -am "v$new_version"
+git tag v$new_version
 
 echo ">>> Publish"
 cargo publish
 git push
-git push origin $new_version
+git push origin v$new_version
