@@ -44,6 +44,7 @@ default = ["zlib-ng-compat"]
 zlib-ng-compat = ["git2/zlib-ng-compat"]
 
 [profile.release]
+lto = true
 strip = true
 
 [package.metadata.deb]
