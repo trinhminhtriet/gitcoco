@@ -30,7 +30,7 @@ semver = "1.0.24"
 serde = { version = "1.0.217", features = ["derive"] }
 serde_yaml = "0.9.34"
 thiserror = "2.0.9"
-time = { version = "0.3.36", features = [ "serde-human-readable" ] }
+time = { version = "0.3.41", features = [ "serde-human-readable" ] }
 url = "2.5.4"
 walkdir = "2.5.0"
 
