@@ -21,7 +21,7 @@ rust-version = "1.60" # for `--features`
 [dependencies]
 anyhow = { version = "1.0.100", features = ["backtrace"] }
 clap = { version = "4.5.42", features = ["derive", "env"] }
-ctrlc = "3.4.7"
+ctrlc = "3.5.0"
 dialoguer = { version = "0.12.0", features = ["fuzzy-select"] }
 git2 = { version = "0.20.2", default-features = false }
 handlebars = "6.2.0"
